@@ -1,0 +1,3 @@
+---
+defaults:
+  install_options: --no-ri --no-rdoc
