@@ -2,6 +2,12 @@
 
 Below is a complete listing of changes for each revision of FasterCSV.
 
+== 1.5.5.1
+* As dirty as it feels, I'm parsing from a source which has given me improperly
+  formed CSV's, but the most important thing to me is that I get a result, as
+  throwing an error and failing isn't helpful, so I'm removing the error that's
+  blocking me.
+
 == 1.5.5
 
 * Removed setup.rb due to licensing concerns.

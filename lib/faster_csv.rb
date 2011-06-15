@@ -1640,10 +1640,6 @@ else
             field_quotes += match.count(@quote_char)
             if field_quotes % 2 == 0
               in_quotes = current_field[@parsers[:quoted_field], 1]
-              if !in_quotes || in_quotes[@parsers[:stray_quote]]
-                raise MalformedCSVError,
-                      "Missing or stray quote in line #{lineno + 1}"
-              end
               current_field = in_quotes
               current_field.gsub!(@quote_char * 2, @quote_char) # unescape contents
               csv           << current_field
